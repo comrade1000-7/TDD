@@ -19,4 +19,11 @@ public class PhoneBookTest {
         int expected = 1;
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void shouldFindByNumber() {
+        String actual = phoneBook.findByNumber("+79122343445");
+        String expected = "Ivanov";
+        assertEquals(expected, actual);
+    }
 }
