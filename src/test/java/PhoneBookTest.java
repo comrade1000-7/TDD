@@ -28,4 +28,11 @@ public class PhoneBookTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    public void shouldFindByName() {
+        String actual = phoneBook.findByName("Petrov");
+        String expected = "Petrov";
+        assertEquals(expected, actual);
+    }
+
 }
