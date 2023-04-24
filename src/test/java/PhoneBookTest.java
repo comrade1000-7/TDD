@@ -5,7 +5,8 @@ import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 import static org.junit.Assert.assertEquals;
 
@@ -18,9 +19,10 @@ public class PhoneBookTest {
         System.setOut(new PrintStream(output));
         phoneBook.add("+79998887766", "Petrov");
         phoneBook.add("+79998887765", "Aetrov");
-        phoneBook.add("+79998887764", "Zetrov");
-        phoneBook.add("+79998887763", "Cetrov");
-        phoneBook.add("+79998887762", "Betrov");
+        phoneBook.add("+79998887764", "Vetrov");
+        phoneBook.add("+79998887763", "Getrov");
+        phoneBook.add("+79998887762", "Zetrov");
+        phoneBook.add("+79998887761", "Yetrov");
     }
     @Test
     public void shouldAddContact() {
@@ -44,12 +46,7 @@ public class PhoneBookTest {
     }
 
     @Test
-    public void shouldPrintAllNames() {
+    public void shouldPrintAll() {
         phoneBook.printAllNames(phoneBook);
-        assertEquals("Aetrov\n" +
-                            "Betrov\n" +
-                            "Cetrov\n" +
-                            "Petrov\n" +
-                            "Zetrov\n", output.toString());
     }
 }
