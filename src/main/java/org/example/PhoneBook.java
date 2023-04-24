@@ -1,5 +1,6 @@
 package org.example;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -16,6 +17,10 @@ public class PhoneBook {
     }
 
     public String findByName(String name) {
+        for (Map.Entry<String, String> entry : phoneBook.entrySet()) {
+            if (entry.getValue().equals(name))
+                return entry.getKey();
+        }
         return null;
     }
 }

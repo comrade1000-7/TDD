@@ -31,7 +31,7 @@ public class PhoneBookTest {
     @Test
     public void shouldFindByName() {
         String actual = phoneBook.findByName("Petrov");
-        String expected = "Petrov";
+        String expected = "+79998887766";
         assertEquals(expected, actual);
     }
 
