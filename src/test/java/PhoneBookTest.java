@@ -27,7 +27,7 @@ public class PhoneBookTest {
     @Test
     public void shouldAddContact() {
         int actual = phoneBook.add("+79122343445", "Ivanov");
-        int expected = 2;
+        int expected = 7;
         assertEquals(expected, actual);
     }
 
@@ -46,7 +46,13 @@ public class PhoneBookTest {
     }
 
     @Test
-    public void shouldPrintAll() {
+    public void shouldPrintAllNames() {
         phoneBook.printAllNames(phoneBook);
+        assertEquals("Aetrov\n" +
+                "Getrov\n" +
+                "Petrov\n" +
+                "Vetrov\n" +
+                "Yetrov\n" +
+                "Zetrov\n", output.toString());
     }
 }

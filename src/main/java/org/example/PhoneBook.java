@@ -29,6 +29,8 @@ public class PhoneBook {
     }
 
     public void printAllNames(PhoneBook phoneBook) {
-
+        phoneBook.getPhoneBook().values().stream()
+                .sorted()
+                .forEach(System.out::println);
     }
 }
