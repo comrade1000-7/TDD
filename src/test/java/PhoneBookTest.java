@@ -12,18 +12,20 @@ public class PhoneBookTest {
     private PhoneBook phoneBook = new PhoneBook();
     @Before
     public void setUp() {
+        phoneBook.add("+79998887766", "Petrov");
     }
     @Test
     public void shouldAddContact() {
-        int actual = phoneBook.add("Ivanov", "+79122343445");
-        int expected = 1;
+        int actual = phoneBook.add("+79122343445", "Ivanov");
+        int expected = 2;
         assertEquals(expected, actual);
     }
 
     @Test
     public void shouldFindByNumber() {
-        String actual = phoneBook.findByNumber("+79122343445");
-        String expected = "Ivanov";
+        String actual = phoneBook.findByNumber("+79998887766");
+        String expected = "Petrov";
         assertEquals(expected, actual);
     }
+
 }
